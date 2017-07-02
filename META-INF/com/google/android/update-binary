@@ -33,15 +33,15 @@ abort() {
 }
 
 ui_print "#####################################";
-ui_print "   				       ";
+ui_print "                                     ";
 ui_print "            Simple Kernel            ";
-ui_print "  				       ";
+ui_print "                                     ";
 ui_print "      Shamu Build r1 | 07/01/17      ";
-ui_print "   				       ";
+ui_print "                                     ";
 ui_print "-------------------------------------";
-ui_print "  			               ";
+ui_print "                                     ";
 ui_print "   By Black_Hat01 @ xda-developers   ";
-ui_print "  				       ";
+ui_print "                                     ";
 ui_print "#####################################";
 sleep 1;
 
@@ -73,7 +73,6 @@ if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.devicecheck)" == 1 ]; then
     if [ "$(getprop ro.product.device)" == "$testname" -o "$(getprop ro.build.product)" == "$testname" ]; then
       ui_print "  ";
       ui_print "    ---> Device is $testname";
-      ui_print "  ";
       match=1;
     fi;
   done;
@@ -85,7 +84,6 @@ if [ "$(file_getprop /tmp/anykernel/anykernel.sh do.devicecheck)" == 1 ]; then
 fi;
 
 ui_print "Installing kernel...";
-ui_print " ";
 for i in $($bb --list); do
   $bb ln -s $bb /tmp/anykernel/bin/$i;
 done;
